@@ -1,9 +1,11 @@
 const route = require('express').Router();
 
-const { list, create, find } = require('../controllers/usuario.controller');
+const Usuario = require('../controllers/usuario.controller');
 
-route.get('/', list);
-route.post('/', create);
-route.get('/:username', find);
+route.get('/', Usuario.list);
+route.post('/', Usuario.create);
+route.put('/', Usuario.update);
+route.delete('/:id', Usuario.delete);
+route.get('/:username', Usuario.find);
 
 module.exports = route;
