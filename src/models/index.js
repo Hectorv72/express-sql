@@ -3,16 +3,12 @@
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
+const { sequelize } = require('../connections/sequelize');
 
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || 'development';
-const config = require('../config/config')[env];
-const db = {};
 
-// With URI:
-// const sequelize = new Sequelize('mysql2://user:password@hostname:port/database')
-const sequelize = new Sequelize(config);
+const db = {};
 
 fs
   .readdirSync(__dirname)

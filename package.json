@@ -20,7 +20,8 @@
   "dependencies": {
     "express": "^4.17.2",
     "express-validator": "^6.14.0",
-    "mysql2": "^2.3.3",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^6.15.0"
   },
   "devDependencies": {
@@ -48,7 +49,10 @@
       "ecmaVersion": 12
     },
     "rules": {
-      "semi": [2, "always"]
+      "semi": [
+        2,
+        "always"
+      ]
     }
   }
 }

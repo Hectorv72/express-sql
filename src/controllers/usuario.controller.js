@@ -6,8 +6,8 @@ const controller = {};
 controller.create = (req, res) => {
   return usuario
     .create({
-      username: req.params.username,
-      status: req.params.status
+      username: req.body.username,
+      status: req.body.status
     })
     .then(usuario => res.status(200).send(usuario))
     .catch(error => res.status(400).send(error));
